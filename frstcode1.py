@@ -13,9 +13,9 @@ def create(k,val,timeout=0):
                 if timeout==0:
                     n=[val,timeout]
                 else:
-                    n=[value,time.time()+timeout]
+                    n=[val,time.time()+timeout]
                 if len(k)<=32: 
-                    d[k]=l
+                    d[k]=n
             else:
                 print("error:Memory limit exceeded!! ")
         else:
@@ -59,16 +59,16 @@ def modify(k,val):
                 print("error: given key does not exist in database. Please enter a valid key")
             else:
                 n=[]
-                n.append(value)
-                n.append(b[1])
-                d[k]=l
+                n.append(val)
+                n.append(a[1])
+                d[k]=n
         else:
-            print("error: time-to-live of",key,"has expired")
+            print("error: time-to-live of",k,"has expired")
     else:
         if k not in d:
             print("error: given key does not exist in database. Please enter a valid key")
         else:
-            a=[]
-            a.append(value)
-            a.append(b[1])
-            d[k]=l
+            n=[]
+            n.append(val)
+            n.append(a[1])
+            d[k]=n
