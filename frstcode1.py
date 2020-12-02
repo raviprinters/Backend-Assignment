@@ -31,7 +31,7 @@ def read(k):
                 s=str(k)+":"+str(a[0])
                 return s
             else:
-                print("error: time-to-live of",key,"has expired")
+                print("error: time-to-live of",k,"has expired")
         else:
             s=str(k)+":"+str(a[0])
             return s
@@ -46,7 +46,7 @@ def delete(k):
                 del d[k]
                 print("key is successfully deleted")
             else:
-                print("error: time-to-live of",key,"has expired") 
+                print("error: time-to-live of",k,"has expired") 
         else:
             del d[k]
             print("key is successfully deleted")
