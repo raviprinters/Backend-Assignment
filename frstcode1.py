@@ -6,7 +6,7 @@ d={}
 
 def create(k,val,timeout=0):
     if k in d:
-        print("error: this key already exists")
+        print("error:this key already exists")
     else:
         if(k.isalpha()):
             if len(d)<(1024*1020*1024) and val<=(16*1024*1024):  
@@ -17,7 +17,7 @@ def create(k,val,timeout=0):
                 if len(k)<=32: 
                     d[k]=l
             else:
-                print("error: Memory limit exceeded!! ")
+                print("error:Memory limit exceeded!! ")
         else:
             print("error: Invalind key_name!! key_name must contain only alphabets and no special characters or numbers")
             
