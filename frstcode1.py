@@ -38,7 +38,7 @@ def read(k):
 
 def delete(k):
     if k not in d:
-        print("error: given key does not exist in database. Please enter a valid key")
+        print("error:given key does not exist in database. Please enter a valid key")
     else:
         a=d[k]
         if a[1]!=0:
